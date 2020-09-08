@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="72.0dip"
+        android:layout_marginLeft="-20.0dip"
+        android:layout_marginRight="-20.0dip"
+        android:background="@drawable/tittle"
+        app:layout_constraintBottom_toTopOf="@+id/web"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NotSibling">
+
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-4.0dip"
+            android:fontFamily="@font/montserrat"
+            android:text="Talks"
+            android:textColor="#FFFFFF"
+            android:textSize="18.0dip"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/imageView3"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:onClick="back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30.0dip"
+            android:layout_marginTop="-5.0dip"
+            android:background="@drawable/ic_baseline_arrow_back_24a" />
+    </FrameLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@drawable/search_layout"
+        android:id="@+id/search_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:paddingLeft="15dp"
+        android:drawablePadding="5dp"
+        android:hint="Search Here..."
+        android:layout_height="50dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"/>
+
+</LinearLayout>
